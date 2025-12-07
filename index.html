@@ -127,7 +127,6 @@
             <button type="submit" class="btn">Send enquiry</button>
           </form>
 
-          <p class="muted" style="margin-top:12px;font-size:0.92rem">Or email us directly at <a href="mailto:info@songsforeverafter.com">info@songsforeverafter.com</a></p>
         </section>
 
       </aside>
@@ -158,8 +157,7 @@
                  'Message:%0D%0A' + message + '%0D%0A%0D%0A' +
                  '--- Sent from Songs Forever After website';
 
-      var mailto = 'mailto:stevesmithpaneuropean@gmail.com' + '?subject=' + subject + '&body=' + body;
-      window.location.href = mailto;
+      window.location.href = 'mailto:stevesmithpaneuropean@gmail.com?subject=' + subject + '&body=' + body;
       return false;
     }
   </script>

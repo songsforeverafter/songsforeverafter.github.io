@@ -1,47 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Songs Forever After</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Songs Forever After — Lovingly Crafted Songs For Your Special Occasion</title>
+  <meta name="description" content="Original, bespoke songs for weddings and special occasions. Hear samples and book Songs Forever After." />
+
+  <style>
+    :root{
+      --bg:#fffafa;
+      --accent:#8b5e83;
+      --muted:#6b6b6b;
+      --card:#ffffff;
+      --radius:16px;
+      --max-width:980px;
+      --container-padding:24px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#111}
+    a{color:var(--accent);text-decoration:none}
+
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:var(--container-padding)}
+
+    header.hero{display:flex;gap:20px;align-items:center;padding:28px;border-radius:var(--radius);background:rgba(255,255,255,0.8);box-shadow:0 6px 20px rgba(10,10,10,0.06)}
+    .logo{flex:0 0 140px}
+    .logo img{width:140px;height:auto;display:block}
+    .hero-content{flex:1}
+    h1{margin:0;font-size:clamp(20px,3.2vw,34px);line-height:1.05}
+    p.tag{margin:8px 0 16px;color:var(--muted);font-size:1rem}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(0,0,0,0.06)}
+
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
+    @media(min-width:880px){.grid{grid-template-columns:2fr 1fr}}
+
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+    h2{margin-top:0}
+    .muted{color:var(--muted)}
+
+    .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px}
+    .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+    .packages{display:flex;flex-direction:column;gap:12px}
+    .pkg{border:1px solid rgba(0,0,0,0.06);padding:14px;border-radius:10px}
+    .price{font-weight:700;color:var(--accent);font-size:1.15rem}
+
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6e6e6;font-size:1rem}
+    textarea{min-height:120px;resize:vertical}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    .center{text-align:center}
+    .listen{margin-top:8px}
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Songs Forever After</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="wrap">
 
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Sharing music, memories, and inspiration with the world. Join us on our journey through sound and song.</p>
-    </section>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="logo">
+        <img src="logo.png" alt="Songs Forever After logo" id="site-logo">
+      </div>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>If you’d like to get in touch, please fill out the form below and we’ll get back to you as soon as possible.</p>
+      <div class="hero-content">
+        <h1>Songs Forever After</h1>
+        <p class="tag">Lovingly Crafted Songs For Your Special Occasion</p>
+        <p class="muted">Capture the magic of your unique story with an original song written for you or your loved one for your special occasion, with Songs Forever After.</p>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+        <div class="cta">
+          <button class="btn" onclick="document.getElementById('samples').scrollIntoView({behavior:'smooth'})">Listen to a sample</button>
+          <a class="btn ghost" href="#packages">See packages</a>
+        </div>
+      </div>
+    </header>
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="_replyto" required>
+    <div class="grid">
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <main>
+        <section id="samples" class="card">
+          <h2>Featured sample</h2>
+          <p class="muted">An original wedding song — click play to listen.</p>
+          <div class="video-wrap" style="margin-top:12px">
+            <iframe src="https://www.youtube.com/embed/zr7m4G5Zc9U" title="Songs Forever After - Sample" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </section>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+        <section id="about" class="card" style="margin-top:16px">
+          <h2>About</h2>
+          <p>Capture the magic of your unique story with an original song written for you or your loved one for your special occasion, with <strong>Songs Forever After</strong>. We craft memorable, emotional songs that become a cherished part of your day.</p>
+          <p class="muted">No two songs are the same — tell us who you are, what matters to you, and we’ll turn your memories into music.</p>
+        </section>
+      </main>
 
-  <footer>
-    <p>&copy; 2025 Songs Forever After. All rights reserved.</p>
-  </footer>
+      <aside>
+        <section id="packages" class="card">
+          <h2>Packages</h2>
+          <div class="packages">
+            <div class="pkg">
+              <h3>The Perfect Couple</h3>
+              <p class="muted">Two original songs — one written exclusively for your special occasion, plus one personalised song recorded for you. Includes up to two revisions.</p>
+              <p class="price">Price: £250</p>
+            </div>
+
+            <div class="pkg">
+              <h3>Band of Gold</h3>
+              <p class="muted">Everything in The Perfect Couple, plus a live performance of the songs at your event, anywhere in the UK.</p>
+              <p class="price">Price: £1000</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:14px">
+          <h2>Contact</h2>
+          <p class="muted">Ready to book or want to ask a question? Send us the details and we’ll get back to you.</p>
+
+          <form id="contactForm" onsubmit="return sendEmail(event)">
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Your email" required>
+            <input type="text" id="occasion" placeholder="Type of event (e.g. wedding)" required>
+            <textarea id="message" placeholder="Tell us a bit about the story you'd like captured"></textarea>
+            <button type="submit" class="btn">Send enquiry</button>
+          </form>
+
+          <p class="muted" style="margin-top:12px;font-size:0.92rem">Or email us directly at <a href="mailto:stevesmithpaneuropean@gmail.com">stevesmithpaneuropean@gmail.com</a></p>
+        </section>
+
+      </aside>
+
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> Songs Forever After — Lovingly Crafted Songs For Your Special Occasion</p>
+      <p class="muted">Made with care</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendEmail(e){
+      e.preventDefault();
+      var name = encodeURIComponent(document.getElementById('name').value || '');
+      var email = encodeURIComponent(document.getElementById('email').value || '');
+      var occasion = encodeURIComponent(document.getElementById('occasion').value || '');
+      var message = encodeURIComponent(document.getElementById('message').value || '');
+
+      var subject = encodeURIComponent('Songs Forever After enquiry from ' + (name || 'a visitor'));
+      var body = 'Name: ' + name + '%0D%0A' +
+                 'Email: ' + email + '%0D%0A' +
+                 'Occasion: ' + occasion + '%0D%0A%0D%0A' +
+                 'Message:%0D%0A' + message + '%0D%0A%0D%0A' +
+                 '--- Sent from Songs Forever After website';
+
+      var mailto = 'mailto:stevesmithpaneuropean@gmail.com' + '?subject=' + subject + '&body=' + body;
+      window.location.href = mailto;
+      return false;
+    }
+  </script>
 </body>
 </html>

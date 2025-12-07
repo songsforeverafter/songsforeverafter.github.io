@@ -6,11 +6,10 @@
   <title>Songs Forever After — Lovingly Crafted Songs For Your Special Occasion</title>
   <meta name="description" content="Original, bespoke songs for weddings and special occasions. Hear samples and book Songs Forever After." />
 
-  <!-- Colour variables: adjust to match your logo if needed -->
   <style>
     :root{
       --bg:#fffafa;
-      --accent:#8b5e83; /* change to match your logo */
+      --accent:#8b5e83;
       --muted:#6b6b6b;
       --card:#ffffff;
       --radius:16px;
@@ -25,7 +24,6 @@
 
     .wrap{max-width:var(--max-width);margin:28px auto;padding:var(--container-padding)}
 
-    /* Header / Hero */
     header.hero{display:flex;gap:20px;align-items:center;padding:28px;border-radius:var(--radius);background:rgba(255,255,255,0.8);box-shadow:0 6px 20px rgba(10,10,10,0.06)}
     .logo{flex:0 0 140px}
     .logo img{width:140px;height:auto;display:block}
@@ -36,32 +34,26 @@
     .btn{background:var(--accent);color:white;padding:10px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
     .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(0,0,0,0.06)}
 
-    /* Grid */
     .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
     @media(min-width:880px){.grid{grid-template-columns:2fr 1fr}}
 
-    /* Card */
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
     h2{margin-top:0}
     .muted{color:var(--muted)}
 
-    /* YouTube responsive */
     .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px}
     .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 
-    /* Packages */
     .packages{display:flex;flex-direction:column;gap:12px}
     .pkg{border:1px solid rgba(0,0,0,0.06);padding:14px;border-radius:10px}
     .price{font-weight:700;color:var(--accent);font-size:1.15rem}
 
-    /* Contact */
     form{display:flex;flex-direction:column;gap:10px}
     input,textarea{padding:10px;border-radius:8px;border:1px solid #e6e6e6;font-size:1rem}
     textarea{min-height:120px;resize:vertical}
 
     footer{margin-top:26px;text-align:center;color:var(--muted);font-size:0.9rem}
 
-    /* Small helpers */
     .center{text-align:center}
     .listen{margin-top:8px}
   </style>
@@ -72,7 +64,6 @@
     <!-- HERO -->
     <header class="hero">
       <div class="logo">
-        <!-- Replace logo.png with your actual logo filename. Upload it to the repo root. -->
         <img src="logo.png" alt="Songs Forever After logo" id="site-logo">
       </div>
 
@@ -88,20 +79,15 @@
       </div>
     </header>
 
-    <!-- GRID: left (media + about) right (packages + contact) -->
     <div class="grid">
 
       <main>
         <section id="samples" class="card">
           <h2>Featured sample</h2>
           <p class="muted">An original wedding song — click play to listen.</p>
-
           <div class="video-wrap" style="margin-top:12px">
-            <!-- Embedded YouTube: provided link converted to embed -->
             <iframe src="https://www.youtube.com/embed/zr7m4G5Zc9U" title="Songs Forever After - Sample" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-
-          <p class="listen muted">Prefer direct audio files? Add links to SoundCloud or MP3s in the repo and replace this section.</p>
         </section>
 
         <section id="about" class="card" style="margin-top:16px">
@@ -126,7 +112,6 @@
               <p class="muted">Everything in The Perfect Couple, plus a live performance of the songs at your event, anywhere in the UK.</p>
               <p class="price">Price: £1000</p>
             </div>
-
           </div>
         </section>
 
@@ -134,7 +119,6 @@
           <h2>Contact</h2>
           <p class="muted">Ready to book or want to ask a question? Send us the details and we’ll get back to you.</p>
 
-          <!-- This form uses the user's email client via a mailto: link generated in JS. -->
           <form id="contactForm" onsubmit="return sendEmail(event)">
             <input type="text" id="name" placeholder="Your name" required>
             <input type="email" id="email" placeholder="Your email" required>
@@ -152,16 +136,14 @@
 
     <footer>
       <p>© <span id="year"></span> Songs Forever After — Lovingly Crafted Songs For Your Special Occasion</p>
-      <p class="muted">Made with care • Replace logo.png with your logo file in the repository root.</p>
+      <p class="muted">Made with care</p>
     </footer>
 
   </div>
 
   <script>
-    // Fill copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Contact form: opens the user's mail client with a prefilled message (works without server-side form)
     function sendEmail(e){
       e.preventDefault();
       var name = encodeURIComponent(document.getElementById('name').value || '');
